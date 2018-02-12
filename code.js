@@ -136,7 +136,7 @@ function getStats(txt) {
 
 function checkEmpty(s){
   for(x in s){
-    if(s[x]!=""&&s[x]!="\t"&&s[x]!="\s"){
+    if(s[x]!=" "&&s[x]!=""&&s[x]!="\t"&&s[x]!="\s"){
       return false;
     }
   }
