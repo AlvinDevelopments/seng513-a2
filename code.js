@@ -145,7 +145,7 @@ function getStats(txt) {
 // check lines to see if they are empty
 function checkEmpty(s){
   for(x in s){
-    if(s[x]!=" "&&s[x]!=""&&s[x]!="\t"&&s[x]!="\s"){
+    if(s[x]!=" "&&s[x]!=""&&s[x]!="\t"&&s[x]!="\s"&&s[x]!="\n"){
       return false;
     }
   }
