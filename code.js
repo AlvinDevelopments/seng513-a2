@@ -1,6 +1,9 @@
 function getStats(txt) {
+    // convert all text to lower case
     let text = txt.toLowerCase();
+    // returns an array of all the words in text
     let words = cleanArray(text.split(/[^a-zA-Z0-9]/));
+    // returns an array of all the lines in text
     let lines = text.split(/\n/);
     if(lines.length==1){
       lines = cleanArray(lines);
@@ -47,8 +50,6 @@ function getStats(txt) {
     else{
         avgwordlength /= nwords;
     }
-
-
 
     // find all unique words
     for(x in words){
@@ -141,6 +142,7 @@ function getStats(txt) {
     };
 }
 
+// check lines to see if they are empty
 function checkEmpty(s){
   for(x in s){
     if(s[x]!=" "&&s[x]!=""&&s[x]!="\t"&&s[x]!="\s"){
@@ -150,6 +152,7 @@ function checkEmpty(s){
   return true;
 }
 
+// cleans the array of ""/empty characters
 function cleanArray(a){
   a = arguments[0];
   let checkagain = 1;
@@ -167,6 +170,7 @@ function cleanArray(a){
     return a;
 }
 
+// checks word to see if it is a palindrome
 function isPalindrome(word){
   if(word.length<3){
     return false;
