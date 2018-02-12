@@ -41,7 +41,14 @@ function getStats(txt) {
     for (x in words){
       avgwordlength += words[x].length;
     }
-    avgwordlength /= nwords;
+    if(avgwordlength==0){
+      avgwordlength = 0;
+    }
+    else{
+        avgwordlength /= nwords;
+    }
+
+
 
     // find all unique words
     for(x in words){
